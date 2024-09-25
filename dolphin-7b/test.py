@@ -53,13 +53,15 @@ def generate_response(prompt: str) -> str:
         outputs = model.generate(
             input_ids=encoding["input_ids"],
             attention_mask=encoding["attention_mask"],
-            max_new_tokens=50,
+            max_new_tokens=60,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.pad_token_id,
         )
     response = tokenizer.decode(outputs[0], skip_special_tokens=True)
     response = response[response.find("\n")+1 : ]
     response = response[ : response.find("\n")]
+    if response == "":
+        response = "As an AI model, I cannot answer this."
     return response.strip()
     
 
