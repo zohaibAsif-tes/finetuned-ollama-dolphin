@@ -10,3 +10,7 @@ pip install scipy
 pip install gradio
 pip install nvidia-ml-py3
 pip install markupsafe==2.0.1
+pip install tiktoken
+pip install blobfile
+pip install protobuf
+pip install SentencePiece
