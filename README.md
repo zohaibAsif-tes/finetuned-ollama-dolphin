@@ -38,30 +38,30 @@ python3 test.py
 
 - `test.py:` A python file for creating a chatbot with the finetuned model using gradio
 
-- `reach-chatbot.txt:` Training data for finetuning the model
+- `ogdr-data.txt:` Training data for finetuning the model
 
 - `req.txt:` A file containing all the required libraries 
 
-- `cached_lm_LlamaTokenizerFast_127_reach-chatbot.txt.lock:` A lock file used during the tokenization process to prevent multiple processes from writing to the same cache file simultaneously.
+- `cached_lm_LlamaTokenizer_127_ogdr-data.txt.lock:` A lock file used during the tokenization process to prevent multiple processes from writing to the same cache file simultaneously.
 
-- `cached_lm_LlamaTokenizerFast_127_reach-chatbot.txt:` Cached tokenized data from the reach-chatbot.txt file for faster processing in subsequent runs.
+- `cached_lm_LlamaTokenizer_127_ogdr-data.txt:` Cached tokenized data from the reach-chatbot.txt file for faster processing in subsequent runs.
 
-- `reach_trained_dolphin_model/adapter_config.json:` Configuration file for the LoRA adapter that contains hyperparameters used during training.
+- `finetuned_ogdr_chatbot/adapter_config.json:` Configuration file for the LoRA adapter that contains hyperparameters used during training.
 
-- `reach_trained_dolphin_model/adapter_model.safetensors:` The trained model weights for the LoRA adapter in a safetensors format, optimized for efficient storage and loading.
+- `finetuned_ogdr_chatbot/adapter_model.safetensors:` The trained model weights for the LoRA adapter in a safetensors format, optimized for efficient storage and loading.
 
-- `experiments/checkpoint-80/adapter_config.json:` Same as the above config file, but for the specific checkpoint (step 80).
+- `ogdr-training-experiments/checkpoint-80/adapter_config.json:` Same as the above config file, but for the specific checkpoint (step 80).
 
-- `experiments/checkpoint-80/adapter_model.safetensors:` Adapter model weights at checkpoint 80, saved for resuming or analyzing intermediate model states.
+- `ogdr-training-experiments/checkpoint-80/adapter_model.safetensors:` Adapter model weights at checkpoint 80, saved for resuming or analyzing intermediate model states.
 
-- `experiments/checkpoint-80/optimizer.pt:` State of the optimizer at checkpoint 80, used to resume training from the same point.
+- `ogdr-training-experiments/checkpoint-80/optimizer.pt:` State of the optimizer at checkpoint 80, used to resume training from the same point.
 
-- `experiments/checkpoint-80/rng_state.pth:` State of the random number generator (RNG) at checkpoint 80 to ensure reproducibility.
+- `ogdr-training-experiments/checkpoint-80/rng_state.pth:` State of the random number generator (RNG) at checkpoint 80 to ensure reproducibility.
 
-- `experiments/checkpoint-80/scheduler.pt:` State of the learning rate scheduler at checkpoint 80 to resume training with the same learning rate progression.
+- `ogdr-training-experiments/checkpoint-80/scheduler.pt:` State of the learning rate scheduler at checkpoint 80 to resume training with the same learning rate progression.
 
-- `experiments/checkpoint-80/trainer_state.json:` Metadata about the trainer’s state at checkpoint 80, including epoch and step progress.
+- `ogdr-training-experiments/checkpoint-80/trainer_state.json:` Metadata about the trainer’s state at checkpoint 80, including epoch and step progress.
 
-- `experiments/checkpoint-80/training_args.bin:` Arguments used for training (like batch size, learning rate) at checkpoint 80, stored for resuming or debugging purposes.
+- `ogdr-training-experiments/checkpoint-80/training_args.bin:` Arguments used for training (like batch size, learning rate) at checkpoint 80, stored for resuming or debugging purposes.
 
 
